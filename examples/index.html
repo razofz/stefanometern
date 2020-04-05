@@ -352,13 +352,27 @@ width: 50%;
   -o-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
 }
-@keyframes cf3FadeInOut {
+
+@keyframes cf1FadeInOut {
   0% {
   opacity:1;
 }10% {
 opacity:1;
-}
-90% {
+}20% {
+opacity:1;
+} 30% {
+opacity:0;
+}40% {
+opacity:0;
+}50% {
+opacity:0;
+}60% {
+opacity:0;
+} 70% {
+opacity:0;
+}80% {
+opacity:0;
+}90% {
 opacity:0;
 }
 100% {
@@ -366,21 +380,76 @@ opacity:0;
 }
 }
 
+@keyframes cf2FadeInOut {
+  0% {
+  opacity:0;
+}10% {
+opacity:0;
+}20% {
+opacity:0;
+} 30% {
+opacity:1;
+}40% {
+opacity:1;
+}50% {
+opacity:1;
+}60% {
+opacity:0;
+} 70% {
+opacity:0;
+}80% {
+opacity:0;
+}90% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+
+@keyframes cf3FadeInOut {
+  0% {
+  opacity:0;
+}10% {
+opacity:0;
+}20% {
+opacity:0;
+} 30% {
+opacity:0;
+}40% {
+opacity:0;
+}50% {
+opacity:0;
+}60% {
+opacity:0;
+} 70% {
+opacity:1;
+} 80% {
+opacity:1;
+}90% {
+opacity:1;
+}
+100% {
+opacity:0;
+}
+}
+
+
+
 #cf img.top {
 animation-name: cf3FadeInOut;
 animation-timing-function: ease-in-out;
-animation-iteration-count: infinite;
+animation-iteration-count: 1;
 animation-duration: 2s;
-animation-direction: alternate;
+animation-direction: normal;
 }
 
 	#cfi {
   position:relative;
   height:140.5px;
   width:225px;
-  margin:0 auto;
-  padding-top: 5px;
-  padding-bottom: -10px;
+  /*margin:0 auto;*/
+  margin-left:47%
 }
 
 #cfi img {
@@ -394,12 +463,69 @@ animation-direction: alternate;
 
 
 #cfi img.top {
+animation-name: cf1FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 6s;
+animation-direction: normal;
+}
+#cfi img.bottom {
+animation-name: cf2FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 6s;
+animation-direction: normal;
+}
+#cfi img.third {
 animation-name: cf3FadeInOut;
 animation-timing-function: ease-in-out;
 animation-iteration-count: infinite;
-animation-duration: 2s;
-animation-direction: alternate;
+animation-duration: 6s;
+animation-direction: normal;
 }
+
+
+#cf_slide {
+  position:relative;
+  height:140.5px;
+  width:500px;
+  /*margin:0 auto;*/
+  margin-left:43%
+}
+
+#cf_slide img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+
+#cf_slide img.top {
+animation-name: cf1FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 6s;
+animation-direction: normal;
+}
+#cf_slide img.bottom {
+animation-name: cf2FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 6s;
+animation-direction: normal;
+}
+#cf_slide img.third {
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 6s;
+animation-direction: normal;
+}
+
+
 
 #support {
 	height: 50px;
@@ -435,8 +561,15 @@ animation-direction: alternate;
     <div class="slide active" id="slide2">
 		<div class="intro">
 				<div id="cfi">
-  				<img class="bottom" src="imgs/happy.png" />
-				<img class="top" src="imgs/proud.png" />
+  				<img class="third" src="imgs/sad.png" />
+  				<img class="top" src="imgs/proud.png" />
+				<img class="bottom" src="imgs/happy.png" />
+
+			</div>
+			<div id="cf_slide">
+	  				<img class="third" src="imgs/slide0.png" />
+					<img class="top" src="imgs/slide50.png" />
+					<img class="bottom" src="imgs/slide100.png" />
 			</div>
 			<h1>Stefanometern!</h1><br>
 			<p>Ta reda på ditt Corona-avtryck &nbsp; &nbsp; Evaluate your Corona footprint<br></p><br>			
